@@ -7,10 +7,10 @@ const Header = () => {
         <span style={styles.logoName}>AI</span>
       </div>
       <nav style={styles.nav}>
-        <a href="#home" style={styles.navLink}>// home</a>
-        <a href="#work" style={styles.navLink}>// work</a>
-        <a href="#expertise" style={styles.navLink}>// expertise</a>
-        <a href="#contact" style={styles.navLink}>// contact</a>
+        <a href="#home" style={styles.navLink}>{'// home'}</a>
+        <a href="#work" style={styles.navLink}>{'// work'}</a>
+        <a href="#expertise" style={styles.navLink}>{'// expertise'}</a>
+        <a href="#contact" style={styles.navLink}>{'// contact'}</a>
       </nav>
     </header>
   );
