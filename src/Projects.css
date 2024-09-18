@@ -1,0 +1,91 @@
+/* Project Card Styling */
+.project-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(57, 20, 66, 0.93);
+  padding: 50px;
+  width: 1300px;
+  transition: transform 0.5s ease-in-out;
+  padding-left: 50px;
+
+  /* Move the project card to the right */
+  margin-left: 60px; /* Adjust this value to shift further to the right */
+}
+
+.project-card.reverse {
+  flex-direction: row-reverse; /* Reverse the order of the image and text */
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+/* Left side: Text Content */
+.project-card-left {
+  flex: 1;
+  padding-right: 80px;
+}
+
+.project-card-left h3 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.project-card-left p {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.project-card-left .read-more-link {
+  font-size: 1.2rem;
+  color: #00c6ff;
+  text-decoration: none;
+}
+
+/* Right side: Image */
+.project-card-right {
+  flex: 1;
+  text-align: right;
+}
+
+.project-card-right img {
+  width: 80%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* For Reverse Layout */
+.project-card.reverse .project-card-left {
+  padding-right: 20px;
+  padding-left: 30px;
+}
+
+.project-card.reverse .project-card-right {
+  text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+    text-align: center;
+    margin-left: 0;
+  }
+  
+  .project-card-left {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .project-card-right img {
+    width: 100%;
+  }
+
+  /* Reset reverse layout for small screens */
+  .project-card.reverse {
+    flex-direction: column;
+  }
+}
