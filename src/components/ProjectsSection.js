@@ -12,6 +12,13 @@ const ProjectsSection = () => {
       link: 'https://medlabbloodbank.onrender.com/' // Link for the first project
     },
     {
+      image: '/game.png',
+      title: 'Game Pop up Animation',
+      description: 'This project implements Full-page and Compact celebration pop-ups using Next.js and Material UI, featuring animations for engaging user interactions. The pop-ups are designed to be both web and mobile responsive, ensuring a seamless experience across devices.',
+      techLogos: ['/htmllogo-removebg-preview.png','/css3logo.png','/reactlogo.png','/nodejs.png','/nextjs.png'],
+      link: 'https://celebrationpopup.netlify.app/' // Add the link for the second project here
+    },
+    {
       image: '/portfolio.png',
       title: 'Personal Portfolio Site',
       description: 'This portfolio showcases a diverse range of web development projects, each designed with a focus on responsive layouts, clean code, and user-friendly interfaces. With an emphasis on both front-end and back-end development, it demonstrates the ability to create dynamic, visually appealing websites that offer seamless user experiences. The projects reflect a strong foundation in modern web technologies and an eye for detail in design.',
@@ -25,6 +32,8 @@ const ProjectsSection = () => {
       techLogos: ['/htmllogo-removebg-preview.png','/css3logo.png','/reactlogo.png','/nodejs.png'],
       link: 'https://master--weatherlookingwebsite.netlify.app/' // Add the link for the second project here
     },
+
+    
     
     {
       image: '/videomeet.jpg',
