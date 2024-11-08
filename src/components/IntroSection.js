@@ -6,7 +6,7 @@ const IntroSection = () => {
     <section id="home"  style={styles.introSection}>
       <h1 style={styles.title}>ADHILA ISMAIL</h1>
       <p style={styles.subtitle}>
-        SOFTWARE TESTER, FRONT END & APP DEVELOPER.
+        SOFTWARE TESTER, FRONT END DEVELOPER.
       </p>
       <a href="https://main--cvadhilaismail.netlify.app/cv-adhilaismail.pdf" target="_blank" rel="noopener noreferrer" style={styles.resumeButton}>
         View Resume

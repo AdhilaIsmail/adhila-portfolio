@@ -107,18 +107,25 @@
   }
 
   .project-card-right img {
-    width: 90%; /* Slightly increase image width for tablet sizes */
+    width: 100%; /* Make image full-width for mobile view */
+    height: auto;
   }
 }
 
 @media (max-width: 768px) {
   /* For smaller screens such as mobile phones */
-  .project-card {
-    flex-direction: column; /* Stack the image and text vertically */
+  /* .project-card {
+    flex-direction: column; 
     text-align: center;
     padding: 20px;
     margin-left: 0;
     margin-right: 0;
+  } */
+  .project-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
   }
 
   .project-card-left {

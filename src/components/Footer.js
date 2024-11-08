@@ -57,7 +57,7 @@ const Footer = () => {
         
         <p><i className="fas fa-phone"></i> +971 569202806</p>
         <p><i className="fas fa-envelope"></i> adhilaismail2@gmail.com</p>
-        <p><i className="fas fa-map-marker-alt"></i> House: Al Nahda, Sharjah, United Arab Emirates</p>
+        <p><i className="fas fa-map-marker-alt"></i> Address: Sharjah, United Arab Emirates</p>
       </div>
 
       {/* Contact Form */}
