@@ -53,8 +53,9 @@
 .project-card-right img {
   width: 100%; /* Make image full-width */
   height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensures the full image is visible within container */
   border-radius: 20px;
-  object-fit: contain; /* Ensure the full image is visible within the container */
+  max-width: 300px; /* Optional max-width for small screens */
 }
 
 /* For Reverse Layout */
@@ -113,10 +114,9 @@
 }
 
 @media (max-width: 768px) {
-  
   .project-card {
-    flex-direction: column; /* Stack content vertically */
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
     margin: 0;
   }
@@ -127,7 +127,7 @@
   }
 
   .project-card-left h3 {
-    font-size: 1.5rem; /* Reduce title size */
+    font-size: 1.5rem;
   }
 
   .project-card-left p {
@@ -135,39 +135,14 @@
   }
 
   .project-card-right img {
-    width: 100%; /* Full width on mobile */
-    height: auto;
-    max-width: 300px; /* Optional max-width for narrow screens */
-    margin-top: 20px;
+    width: 90%; /* Reduce image width for mobile view */
+    object-fit: contain;
   }
-
-  /* Reset reverse layout for small screens */
-  .project-card.reverse {
-    flex-direction: column;
-  }
-
-  .project-card.reverse .project-card-left {
-    padding-left: 0;
-  } 
-
-  
 }
 
-/* Logo Styling (Tech Logos) */
-.tech-logos {
-  display: flex;
-  justify-content: center; /* Center the logos */
-  gap: 10px;
-  margin-top: 20px;
-}
 
-.tech-logo {
-  width: 40px;
-  height: auto;
-}
 
 @media (max-width: 480px) {
-  /* Additional adjustments for very small screens */
   .project-card {
     padding: 15px;
   }
@@ -181,10 +156,7 @@
   }
 
   .project-card-right img {
+    width: 80%;
     max-width: 250px;
-  }
-
-  .tech-logo {
-    width: 30px; /* Adjust logo size for mobile */
   }
 }

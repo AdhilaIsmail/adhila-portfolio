@@ -85,8 +85,8 @@ const styles = {
       marginTop: '5px',
     },
     navLink: {
-      fontSize: '10px',
-      marginLeft: '5px',
+      fontSize: '8px',
+      marginLeft: '12px',
     },
     logo: {
       fontSize: '18px',
