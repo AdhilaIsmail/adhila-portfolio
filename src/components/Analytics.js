@@ -12,6 +12,11 @@ const Analytics = () => {
       <h2 style={styles.title}>Skills & Technologies</h2>
       <div style={styles.skillContainer}>
         {/* Skill bars with percentage display */}
+        <Skill name="Selenium" percentage={85} />
+        <Skill name="TestNG" percentage={50} />
+        <Skill name="JMeter" percentage={50} />
+        <Skill name="Postman" percentage={70} />
+        <Skill name="Jira" percentage={60} />
         <Skill name="HTML" percentage={90} />
         <Skill name="CSS" percentage={85} />
         <Skill name="Bootstrap" percentage={80} />
@@ -22,10 +27,6 @@ const Analytics = () => {
         <Skill name="PHP" percentage={60} />
         <Skill name="Java" percentage={75} />
         <Skill name="Figma" percentage={60} />
-        <Skill name="Selenium" percentage={85} />
-        <Skill name="TestNG" percentage={60} />
-        <Skill name="JMeter" percentage={50} />
-        <Skill name="Postman" percentage={70} />
         <Skill name="React" percentage={60} />
       </div>
     </section>

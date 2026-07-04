@@ -55,9 +55,9 @@ const Footer = () => {
       <div style={styles.contactDetails}>
         <h3 style={styles.heading}>Drop Me a Message</h3>
         
-        <p><i className="fas fa-phone"></i> +971 569202806</p>
-        <p><i className="fas fa-envelope"></i> adhilaismail2@gmail.com</p>
-        <p><i className="fas fa-map-marker-alt"></i> Address: Sharjah, United Arab Emirates</p>
+        <p><i className="fas fa-phone"></i> +971 552426367</p>
+        <p><i className="fas fa-envelope"></i> adhilaismail.sh@gmail.com</p>
+        <p><i className="fas fa-map-marker-alt"></i> Address: Ras Al Khor, Dubai</p>
       </div>
 
       {/* Contact Form */}
