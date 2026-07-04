@@ -8,7 +8,7 @@ const IntroSection = () => {
       <p style={styles.subtitle}>
         SOFTWARE TESTER, SOFTWARE DEVELOPER.
       </p>
-      <a href="https://personalportfolio-adhila.netlify.app/" target="_blank" rel="noopener noreferrer" style={styles.resumeButton}>
+      <a href="CV_ADHILA ISMAIL.pdf" target="_blank" rel="noopener noreferrer" style={styles.resumeButton}>
         View Resume
       </a>
     </section>
