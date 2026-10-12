@@ -1,33 +1,25 @@
 import React from 'react';
 import Header from './components/Header';
 import IntroSection from './components/IntroSection';
+import AboutSection from './components/AboutSection';
 import ProjectsSection from './components/ProjectsSection';
 import Analytics from './components/Analytics';
 import Footer from './components/Footer';
+import './App.css';
 
-
-
-const App = () => {
+function App() {
   return (
-    <div style={styles.container}>
+    <div className="site-shell">
       <Header />
-      <IntroSection />
-      <ProjectsSection />
-      <Analytics />
+      <main>
+        <IntroSection />
+        <AboutSection />
+        <ProjectsSection />
+        <Analytics />
+      </main>
       <Footer />
     </div>
   );
-};
-
-const styles = {
-  container: {
-    backgroundImage: 'url("/bg15.jpg")', // Use your image path here
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundAttachment: 'fixed', // To keep it fixed as you scroll
-    minHeight: '100vh', 
-    width: '100%',
-  },
-};
+}
 
 export default App;

@@ -1,28 +1,51 @@
 import React from 'react';
-import './Projects.css';
 
-const ProjectCard = ({ image, title, description, techLogos, reverse, link }) => {
-  return (
-    <div className={`project-card ${reverse ? 'reverse' : ''}`}>
-      <div className="project-card-left">
-        <h3>{title}</h3>
-        <p>{description}</p>
-        {/* Technology Logos */}
-        <div className="tech-logos">
-          {techLogos.map((logo, index) => (
-            <img key={index} src={logo} alt={`tech-logo-${index}`} className="tech-logo" />
-          ))}
+const ProjectCard = ({ project }) => {
+  const card = (
+    <>
+      <div className="project-visual">
+        <img src={project.image} alt="" />
+        <span className="project-category">
+          {project.category} <i>·</i> {project.number}
+        </span>
+        <span className="project-arrow" aria-hidden="true">
+          {project.link ? '↗' : '→'}
+        </span>
+      </div>
+
+      <div className="project-content">
+        <h3>{project.title}</h3>
+        <p>{project.description}</p>
+
+        <div className="project-meta">
+          <div className="project-tags">
+            {project.tags.map((tag) => (
+              <span key={tag}>{tag}</span>
+            ))}
+          </div>
+
+          {project.link && (
+            <span className="project-live">
+              LIVE PROJECT <i aria-hidden="true">↗</i>
+            </span>
+          )}
         </div>
+      </div>
+    </>
+  );
 
-        {/* Dynamic Project Link */}
-        <a href={link} className="read-more-link" target="_blank" rel="noopener noreferrer">
-          View Website &#10140;
-        </a>
-      </div>
-      <div className="project-card-right">
-        <img src={image} alt={title} />
-      </div>
-    </div>
+  return project.link ? (
+    <a
+      className="project-card"
+      href={project.link}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={`${project.title} — open live project`}
+    >
+      {card}
+    </a>
+  ) : (
+    <article className="project-card">{card}</article>
   );
 };
 
