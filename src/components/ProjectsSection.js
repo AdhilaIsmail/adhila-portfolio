@@ -1,68 +1,79 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
+import Reveal from './Reveal';
 import './Projects.css';
 
-const ProjectsSection = () => {
-  const projects = [
-    {
-      image: '/Blood4.jpg',
-      title: 'Blood Bank & Laboratory System',
-      description: 'Medlab Blood Bank is a comprehensive platform designed to optimize blood bank and laboratory operations. It streamlines processes such as donor engagement, inventory management, hospital transactions, and laboratory procedures, enhancing overall efficiency and service provision.',
-      techLogos: ['/python-logo.png','/django.png','/htmllogo-removebg-preview.png','/css3logo.png','/bootstrap.png'],
-      link: 'https://medlabbloodbank.onrender.com/' // Link for the first project
-    },
-    {
-      image: '/game.png',
-      title: 'Game Pop up Animation',
-      description: 'This project implements Full-page and Compact celebration pop-ups using Next.js and Material UI, featuring animations for engaging user interactions. The pop-ups are designed to be both web and mobile responsive, ensuring a seamless experience across devices.',
-      techLogos: ['/htmllogo-removebg-preview.png','/css3logo.png','/reactlogo.png','/nodejs.png','/nextjs.png'],
-      link: 'https://celebrationpopup.netlify.app/' // Add the link for the second project here
-    },
-    {
-      image: '/portfolio.png',
-      title: 'Personal Portfolio Site',
-      description: 'This portfolio showcases a diverse range of web development projects, each designed with a focus on responsive layouts, clean code, and user-friendly interfaces. With an emphasis on both front-end and back-end development, it demonstrates the ability to create dynamic, visually appealing websites that offer seamless user experiences. The projects reflect a strong foundation in modern web technologies and an eye for detail in design.',
-      techLogos: ['/htmllogo-removebg-preview.png','/css3logo.png','/reactlogo.png','/nodejs.png'],
-      link: 'https://master--weatherlookingwebsite.netlify.app/' // Add the link for the second project here
-    },
-    {
-      image: '/blood5.jpg',
-      title: 'Weather Checker Site',
-      description: 'A React-based web application that fetches and displays real-time weather data using a weather API. The app allows users to search for weather updates by city, providing details such as temperature, humidity, and wind speed. This project demonstrates my skills in working with APIs, React components, and managing state for dynamic data updates.',
-      techLogos: ['/htmllogo-removebg-preview.png','/css3logo.png','/reactlogo.png','/nodejs.png'],
-      link: 'https://master--weatherlookingwebsite.netlify.app/' // Add the link for the second project here
-    },
+const projects = [
+  {
+    number: '01',
+    title: 'Blood Bank & Laboratory System',
+    category: 'Healthcare platform',
+    image: '/blood4.jpg',
+    description:
+      'A platform for donor engagement, inventory management, hospital transactions, and laboratory operations.',
+    tags: ['Python', 'Django', 'HTML / CSS'],
+    link: 'https://medlabbloodbank.netlify.app/',
+  },
+  {
+    number: '02',
+    title: 'Game Pop-up Animation',
+    category: 'Interaction design',
+    image: '/game.png',
+    description:
+      'Full-page and compact celebration pop-ups with responsive layouts and lively animated interactions.',
+    tags: ['Next.js', 'React', 'Material UI'],
+    link: 'https://celebrationpopup.netlify.app/',
+  },
+  {
+    number: '03',
+    title: 'Personal Portfolio',
+    category: 'Web development',
+    image: '/portfolio.png',
+    description:
+      'A portfolio showcasing my development work, testing skills, and selected projects.',
+    tags: ['React', 'JavaScript', 'CSS'],
+    link: 'https://portfolioadhila.netlify.app/',
+  },
+  {
+    number: '04',
+    title: 'Weather App',
+    category: 'Live weather data',
+    image: '/blood5.jpg',
+    description:
+      'A weather dashboard concept with current conditions and a multi-day forecast.',
+    tags: ['JavaScript', 'API', 'CSS'],
+    link: 'https://weatherlooking.netlify.app/',
+  },
+  {
+    number: '05',
+    title: 'Video Meet',
+    category: 'Real-time communication',
+    image: '/videomeet.jpg',
+    description:
+      'A browser-based video meeting project exploring real-time communication with WebRTC.',
+    tags: ['WebRTC', 'JavaScript', 'Video'],
+    link: '',
+  },
+];
 
-    
-    
-    {
-      image: '/videomeet.jpg',
-      title: 'Video Calling Platform Using WebRTC',
-      description: 'Developed a video calling meeting app using WebRTC and Python Django, enabling instructors to schedule meetings and users to view and join them. The app leverages real-time communication features to facilitate seamless video interactions.',
-      techLogos: ['/python-logo.png','/django.png','/webrtc.png','/htmllogo-removebg-preview.png','/css3logo.png','/bootstrap.png'],
-       link: ''
-    },
-    // Add more projects as necessary
-  ];
-
-  return (
-    <section id="work" className="projects-section">
-      <h2>Recent Projects</h2>
-      <div className="projects-grid">
-        {projects.map((project, index) => (
-          <ProjectCard 
-            key={index}
-            image={project.image}
-            title={project.title}
-            description={project.description}
-            techLogos={project.techLogos}
-            link={project.link} // Pass the link to the ProjectCard
-            reverse={index % 2 === 1} // If index is odd, apply reverse layout
-          />
-        ))}
+const ProjectsSection = () => (
+  <section className="projects-section" id="work">
+    <div className="projects-heading">
+      <div>
+        <p className="eyebrow">Selected work</p>
+        <h2>Projects in practice.</h2>
       </div>
-    </section>
-  );
-};
+      <span className="projects-count">01 — 05 / BUILT &amp; TESTED</span>
+    </div>
+
+    <div className="projects-grid">
+      {projects.map((project, index) => (
+        <Reveal key={project.number} delay={index * 90}>
+          <ProjectCard project={project} />
+        </Reveal>
+      ))}
+    </div>
+  </section>
+);
 
 export default ProjectsSection;

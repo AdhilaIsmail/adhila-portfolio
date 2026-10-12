@@ -1,83 +1,88 @@
 import React from 'react';
 
-
-const IntroSection = () => {
-  return (
-    <section id="home"  style={styles.introSection}>
-      <h1 style={styles.title}>ADHILA ISMAIL</h1>
-      <p style={styles.subtitle}>
-        SOFTWARE TESTER, SOFTWARE DEVELOPER.
+const IntroSection = () => (
+  <section className="hero" id="home" aria-labelledby="hero-title">
+    <div className="hero-copy">
+      <p className="eyebrow hero-eyebrow">
+        Software quality <span /> Dubai, UAE
       </p>
-      <a href="CV_ADHILA ISMAIL.pdf" target="_blank" rel="noopener noreferrer" style={styles.resumeButton}>
-        View Resume
-      </a>
-    </section>
-  );
-};
 
-  const styles = {
-    introSection: {
-      height: '100vh',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: 'rgba(95, 61, 99, 0.026)', 
-      color: '#fff',
-      textAlign: 'center',
-    },
-    title: {
-      fontSize: '8vw', // Responsive large text
-      fontWeight: 'bold',
-      letterSpacing: '0.05em',
-      margin: '0',
-      color: '#fff',
-    },
-    subtitle: {
-      fontSize: '1.5vw',
-      marginTop: '20px',
-      color: '#ccc',
-      letterSpacing: '0.1em',
-      textTransform: 'uppercase',
-    },
-    resumeButton: {
-      marginTop: '30px',
-      padding: '10px 30px',
-      fontSize: '1.2vw',
-      color: '#fff',
-      backgroundColor: '#00c6ff',
-      border: 'none',
-      borderRadius: '5px',
-      textDecoration: 'none',
-      cursor: 'pointer',
-      transition: 'background-color 0.3s ease',
-    },
-    resumeButtonHover: {
-      backgroundColor: '#007acc',
-    },
-    // Media Queries for Responsiveness
-    '@media (max-width: 768px)': {
-      title: {
-        fontSize: '12vw', // Larger text for tablets
-      },
-      subtitle: {
-        fontSize: '3vw', // Larger subtitle for tablets
-      },
-      resumeButton: {
-        fontSize: '3vw',
-      },
-    },
-    '@media (max-width: 480px)': {
-      title: {
-        fontSize: '15vw', // Even larger text for mobile
-      },
-      subtitle: {
-        fontSize: '4vw', // Larger subtitle for mobile
-      },
-      resumeButton: {
-        fontSize: '4vw',
-      },
-    },
-  };
-  
+      <h1 id="hero-title">
+        Adhila
+        <br />
+        <span>Ismail.</span>
+      </h1>
+
+      <div
+        className="role-window"
+        aria-label="Software tester, software developer, QA and automation"
+      >
+        <div className="role-rotator" aria-hidden="true">
+          <span>Software Tester</span>
+          <span>Software Developer</span>
+          <span>QA &amp; Automation</span>
+          <span>Software Tester</span>
+        </div>
+      </div>
+
+      <p className="hero-description">
+        I build and test digital experiences with care—bringing thoughtful
+        development and a quality-first mindset to every project.
+      </p>
+
+      <div className="hero-proof" aria-label="Areas of focus">
+        <span>Test automation</span>
+        <span>Frontend development</span>
+        <span>API testing</span>
+      </div>
+
+      <div className="hero-actions">
+        <a className="button button-primary" href="#work">
+          Explore my work <span aria-hidden="true">↘</span>
+        </a>
+        <a
+          className="resume-link"
+          href="/CV_ADHILA%20ISMAIL.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View résumé <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <div className="hero-portrait" aria-label="Portrait of Adhila Ismail">
+      <div className="orbit orbit-one" />
+      <div className="orbit orbit-two" />
+      <div className="orbit orbit-three" />
+      <span className="orbit-beacon" />
+      <span className="orbit-label orbit-label-api">API TESTING</span>
+      <span className="orbit-label orbit-label-quality">QUALITY FIRST</span>
+      <span className="orbit-label orbit-label-auto">AUTOMATION</span>
+
+      <div className="portrait-frame">
+        <img src="/profile.avif" alt="Adhila Ismail" />
+        <div className="portrait-shine" />
+      </div>
+
+      <div className="portrait-tag portrait-tag-top">
+        <b>01</b> / TEST WITH PURPOSE
+      </div>
+      <div className="portrait-tag portrait-tag-bottom">
+        <b>02</b> / BUILD WITH CARE
+      </div>
+    </div>
+
+    <div className="availability">
+      <span className="availability-dot" /> Open to opportunities
+    </div>
+
+    <a className="scroll-cue" href="#about">
+      Scroll to explore <span aria-hidden="true">↓</span>
+    </a>
+
+    <span className="hero-index">PORTFOLIO · 2026</span>
+  </section>
+);
+
 export default IntroSection;

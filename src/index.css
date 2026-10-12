@@ -1,15 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #080b14;
+}
+
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  min-width: 320px;
+  font-family: Manrope, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button,
+input,
+textarea {
+  font: inherit;
 }
-a:hover {
-  color: #00FFFF;
+
+::selection {
+  background: #78f1e1;
+  color: #071211;
+}
+
+:focus-visible {
+  outline: 2px solid #78f1e1;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
