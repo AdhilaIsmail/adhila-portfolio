@@ -16,6 +16,26 @@ const projects = [
   },
   {
     number: '02',
+    title: 'Quickora Website',
+    category: 'Business',
+    image: '/quick.png',
+    description:
+      'A responsive website for a service business, featuring service information, easy navigation, and an enquiry form for customers.',
+    tags: ['Python', 'Django', 'HTML / CSS', 'JavaScript'],
+    link: 'https://quickora-website.onrender.com/',
+  },
+  {
+    number: '03',
+    title: 'Personal Portfolio',
+    category: 'Web development',
+    image: '/portfolio.png',
+    description:
+      'A responsive portfolio showcasing my software development, QA, and support skills, along with selected projects.',
+    tags: ['React', 'JavaScript', 'CSS'],
+    link: 'https://portfolioadhila.netlify.app/',
+  },
+  {
+    number: '04',
     title: 'Game Pop-up Animation',
     category: 'Interaction design',
     image: '/game.png',
@@ -24,18 +44,9 @@ const projects = [
     tags: ['Next.js', 'React', 'Material UI'],
     link: 'https://celebrationpopup.netlify.app/',
   },
+ 
   {
-    number: '03',
-    title: 'Personal Portfolio',
-    category: 'Web development',
-    image: '/portfolio.png',
-    description:
-      'A portfolio showcasing my development work, testing skills, and selected projects.',
-    tags: ['React', 'JavaScript', 'CSS'],
-    link: 'https://portfolioadhila.netlify.app/',
-  },
-  {
-    number: '04',
+    number: '05',
     title: 'Weather App',
     category: 'Live weather data',
     image: '/blood5.jpg',
@@ -45,7 +56,7 @@ const projects = [
     link: 'https://weatherlooking.netlify.app/',
   },
   {
-    number: '05',
+    number: '06',
     title: 'Video Meet',
     category: 'Real-time communication',
     image: '/videomeet.jpg',
